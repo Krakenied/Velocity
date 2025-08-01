@@ -503,6 +503,7 @@ public class VelocityConfiguration implements ProxyConfig {
       final ConfigurationMigration[] migrations = {
           new ForwardingMigration(),
           new KeyAuthenticationMigration(),
+          new com.velocitypowered.proxy.config.migration.MiniMessageTranslationsMigration(),
           new MotdMigration(),
           new TransferIntegrationMigration()
       };

@@ -27,6 +27,7 @@ import org.apache.logging.log4j.Logger;
 public sealed interface ConfigurationMigration
         permits ForwardingMigration,
                 KeyAuthenticationMigration,
+                MiniMessageTranslationsMigration,
                 MotdMigration,
                 TransferIntegrationMigration {
   boolean shouldMigrate(CommentedFileConfig config);

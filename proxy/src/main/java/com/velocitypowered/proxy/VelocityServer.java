@@ -342,8 +342,8 @@ public class VelocityServer implements ProxyServer, ForwardingAudience {
   }
 
   private void registerTranslations() {
-    final TranslationStore.StringBased<MessageFormat> translationRegistry =
-            TranslationStore.messageFormat(Key.key("velocity", "translations"));
+    final TranslationStore.StringBased<MessageFormat> translationRegistry = new com.velocitypowered.proxy.util.VelocityTranslationStore(
+            TranslationStore.messageFormat(Key.key("velocity", "translations")));
     translationRegistry.defaultLocale(Locale.US);
     try {
       ResourceUtils.visitResources(VelocityServer.class, path -> {
